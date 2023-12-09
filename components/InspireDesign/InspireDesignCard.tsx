@@ -16,7 +16,7 @@ const InspireDesignCard = ({product} : { product: ProductProps}) => {
                         borderRadius={'10px'}
                         alt='fabric'
                     />
-                    <Badge p={2}>$ {product.price}</Badge>
+                    <Badge p={2}>Bestsellen $ {product.price}</Badge>
                     <Heading 
                         color={'white'} 
                         fontWeight={'bold'}
