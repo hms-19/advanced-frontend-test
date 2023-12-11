@@ -3,7 +3,7 @@ import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
 import InspireDesignCard from './InspireDesignCard'
 
-const InspireDesignSection = () => {
+const InspireDesignSection = ({products}: {products : []}) => {
   return (
     <>
         <Container maxW={'container.lg'} mt={['20px','30px','60px']}>

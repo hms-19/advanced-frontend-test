@@ -1,8 +1,8 @@
 
 import { Box, Flex, Heading, Table, TableContainer, Tbody, Td, Text, Th, Tr } from '@chakra-ui/react'
 import React from 'react'
-import { FaStar } from "react-icons/fa";
 import Rating from '../Utils/Rating';
+import { FabricContentProps } from '@/types/fabric';
 
 const cellStyle = {
     width: '10%',
@@ -12,7 +12,7 @@ const cellStyle = {
     color: "#fff"
 }
 
-const FabricContent = () => {
+const FabricContent = ({type,material,weave,weight,finish,comfort,ironing} : FabricContentProps) => {
   return (
     <>
         <Flex w={'100%'} minH={'100%'} flexDirection={'column'} alignItems={'start'} justifyContent={'space-between'} gap={'30px'}>
@@ -21,19 +21,23 @@ const FabricContent = () => {
                     <Tbody>
                         <Tr>
                             <Th sx={cellStyle}>Type</Th>
-                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>Houptstoff</Td>
+                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>{type ?? '-'}</Td>
                         </Tr>
                         <Tr>
                             <Th sx={cellStyle}>Material</Th>
-                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>80% Bomwolle</Td>
+                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>{material ?? '-'}</Td>
                         </Tr>
                         <Tr>
                             <Th sx={cellStyle}>Webart</Th>
-                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>Poplin</Td>
+                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>{weave}</Td>
                         </Tr>
                         <Tr>
                             <Th sx={cellStyle}>gewicht</Th>
-                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>135 g/m2</Td>
+                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>{weight}</Td>
+                        </Tr>
+                        <Tr>
+                            <Th sx={cellStyle}>Finish</Th>
+                            <Td sx={{ ...cellStyle, color: "#ccc", w: '90%' }}>{finish}</Td>
                         </Tr>
                     </Tbody>
                 </Table>
@@ -43,13 +47,13 @@ const FabricContent = () => {
                     <Heading fontSize={'16px'} minW={'70px'}>
                         Ironing 
                     </Heading>
-                    <Rating rate={3} />
+                    <Rating rate={ironing} />
                 </Flex>
                 <Flex gap={'10px'} alignItems={'center'}>
                     <Heading fontSize={'16px'} minW={'70px'}>
                         Comfort 
                     </Heading>
-                    <Rating rate={4} />
+                    <Rating rate={comfort} />
                 </Flex>
             </Box>
         </Flex>
