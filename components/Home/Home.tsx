@@ -1,4 +1,5 @@
 import { Flex, Heading, Kbd, Text } from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
 
 const Home = () => {
@@ -9,7 +10,11 @@ const Home = () => {
             Home Page
           </Heading>
           <Text>
-              You can test   <Kbd>/fabrics/:fabricId</Kbd> , I just develop with dummy data
+              You can test   <Kbd>/fabrics/:fabricId</Kbd>
+          </Text>
+
+          <Text>
+              Example Url   <Link href={'/fabrics/38'}><Kbd>/fabrics/22</Kbd></Link> <Link href={'/fabrics/38'}><Kbd>/fabrics/38</Kbd></Link>
           </Text>
         </Flex>
     </>
