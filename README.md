@@ -15,7 +15,7 @@ Please Feel Free to ask me if you have any problem.
 
 ## Tech Stack
 
-**Client:** NextJS14, ChakaraUi, SWR , Zustan
+**Client:** NextJS14, ChakaraUi
 
 
 
